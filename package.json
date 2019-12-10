@@ -1,0 +1,62 @@
+{
+  "name": "rollup-plugin-copy",
+  "description": "Copy files and folders using Rollup",
+  "version": "3.1.0",
+  "author": "Vlad Shcherbin <vlad.shcherbin@gmail.com>",
+  "repository": "vladshcherbin/rollup-plugin-copy",
+  "main": "dist/index.commonjs.js",
+  "module": "dist/index.module.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "clean": "rimraf coverage dist",
+    "build": "rollup -c",
+    "lint": "eslint src tests",
+    "postpublish": "yarn clean",
+    "prepublishOnly": "yarn lint && yarn test && yarn clean && yarn build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^8.0.0",
+    "colorette": "^1.1.0",
+    "fs-extra": "^8.1.0",
+    "globby": "10.0.1",
+    "is-plain-object": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0",
+    "codecov": "^3.5.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.8.0",
+    "replace-in-file": "^4.1.1",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.17.0",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-babel": "^4.3.3"
+  },
+  "files": [
+    "dist",
+    "index.d.ts",
+    "readme.md"
+  ],
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "copy",
+    "cp",
+    "asset",
+    "assets",
+    "file",
+    "files",
+    "folder",
+    "folders",
+    "glob"
+  ],
+  "engines": {
+    "node": ">=8.3"
+  },
+  "license": "MIT"
+}
